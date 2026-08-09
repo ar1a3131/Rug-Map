@@ -3,7 +3,6 @@
   import { COLOR_CONFIG, getRugNormalizedColors } from '$lib/colorMap.js';
   import ViewNav from '$lib/ViewNav.svelte';
   import { base } from '$app/paths';
-    import { base } from '$app/paths'; 
 
 
   let rugData = $state([]);
