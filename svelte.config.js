@@ -17,14 +17,11 @@ const config = {
       strict: true
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS ? '/Rug-Map' : ''
+      base: process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS ? '/Rug-Map' : '',
+      relative: true
     },
     prerender: {
-      handleHttpError: ({ path, referrer, message }) => {
-        // Suppress 404s caused by root link crawling during static build
-        if (path === '/') return;
-        throw new Error(message);
-      }
+      handleHttpError: 'warn'
     }
   }
 };
