@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: 'package-lock.json'
+          cache-dependency-path: './rug-map/package-lock.json'
 
       - name: Install dependencies
         run: npm ci
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/'
+          path: './rug-map/build/'
 
       - name: Deploy to GitHub Pages
         id: deployment
