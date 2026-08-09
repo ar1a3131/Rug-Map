@@ -2,7 +2,8 @@
 <script>
   import { STYLE_CONFIG, getRugNormalizedStyles } from '$lib/styleMap.js';
   import ViewNav from '$lib/ViewNav.svelte';
-    import { base } from '$app/paths'; 
+  import { base } from '$app/paths'; 
+  import RugCard from '$lib/components/RugCard.svelte';
 
 
   let rugData = $state([]);
@@ -156,31 +157,7 @@
 
     <div class="rug-grid">
       {#each activeRugs as rug (rug.id || rug.name)}
-        <div class="rug-card">
-          <div class="img-wrapper">
-            {#if rug.image_url}
-              <img src={rug.image_url} alt={rug.name} loading="lazy" />
-            {:else}
-              <div class="no-img">No Image Available</div>
-            {/if}
-          </div>
-          <div class="card-info">
-            <h4>{rug.name || 'Rug Item'}</h4>
-            <span class="city-tag">{rug.parsed_data?.city || 'Unknown Origin'}</span>
-            
-            <div class="styles-list">
-              {#each getRugNormalizedStyles(rug) as sKey}
-                <span 
-                  class="chip"
-                  class:highlight={selectedStyles.includes(sKey)}
-                >
-                  <span class="chip-dot" style="background-color: {STYLE_CONFIG[sKey]?.badgeColor};"></span>
-                  {STYLE_CONFIG[sKey]?.label || sKey}
-                </span>
-              {/each}
-            </div>
-          </div>
-        </div>
+        <RugCard {rug} />
       {/each}
     </div>
   </main>
