@@ -36,7 +36,7 @@
     if (!mapElement) return;
 
     async function initMap() {
-      const res = await fetch('/rugs_with_image_analysis.json');
+      const res = await fetch('${base}/rugs_with_image_analysis.json');
       const data = await res.json();
       rugData = data;
 
