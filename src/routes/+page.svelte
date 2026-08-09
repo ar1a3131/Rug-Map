@@ -5,6 +5,7 @@
   import { COUNTRY_COORDS } from '$lib/countryCoords.js';
   import RugCard from '$lib/components/RugCard.svelte';
   import ViewNav from '$lib/ViewNav.svelte';
+  import { base } from '$app/paths'; // 1. Add this import
 
   // 1. Reactive state using Svelte 5 runes
   let rugData = $state([]);
