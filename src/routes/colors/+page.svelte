@@ -2,6 +2,7 @@
 <script>
   import { COLOR_CONFIG, getRugNormalizedColors } from '$lib/colorMap.js';
   import ViewNav from '$lib/ViewNav.svelte';
+  import { base } from '$app/paths';
 
   let rugData = $state([]);
   let selectedColors = $state([]); // Stores array of active color keys

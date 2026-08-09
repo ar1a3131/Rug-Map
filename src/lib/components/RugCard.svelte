@@ -1,5 +1,6 @@
 <!-- src/lib/components/RugCard.svelte -->
 <script>
+  
   // 1. Accept props using the $props() rune
   let { rug = {} } = $props();
 
