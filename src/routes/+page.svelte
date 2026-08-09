@@ -216,7 +216,7 @@
 
 <svelte:head>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <title>Rug Collection - Style Exploration</title>
+  <title>Rug Collection - Map Exploration</title>
 </svelte:head>
 
 
