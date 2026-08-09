@@ -242,7 +242,7 @@
           class="store-link-btn"
           title="Visit my GitHub repo to look at my messy code for this project!"
         >
-          <span>👾 GitHub Repo</span>
+          <span>👾 Project GitHub Repo</span>
           <span class="external-arrow">↗</span>
         </a>
 
