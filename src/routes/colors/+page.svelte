@@ -3,6 +3,8 @@
   import { COLOR_CONFIG, getRugNormalizedColors } from '$lib/colorMap.js';
   import ViewNav from '$lib/ViewNav.svelte';
   import { base } from '$app/paths';
+    import { base } from '$app/paths'; 
+
 
   let rugData = $state([]);
   let selectedColors = $state([]); // Stores array of active color keys
@@ -11,7 +13,7 @@
   // Load JSON Data
   $effect(() => {
     async function loadData() {
-      const res = await fetch('/rugs_with_image_analysis.json');
+      const res = await fetch(`${base}/rugs_with_image_analysis.json`);      
       rugData = await res.json();
     }
     loadData();

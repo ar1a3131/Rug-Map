@@ -2,6 +2,8 @@
 <script>
   import { STYLE_CONFIG, getRugNormalizedStyles } from '$lib/styleMap.js';
   import ViewNav from '$lib/ViewNav.svelte';
+    import { base } from '$app/paths'; 
+
 
   let rugData = $state([]);
   let selectedStyles = $state([]);
@@ -10,7 +12,7 @@
   // Fetch Data
   $effect(() => {
     async function loadData() {
-      const res = await fetch('/rugs_with_image_analysis.json');
+      const res = await fetch(`${base}/rugs_with_image_analysis.json`);      
       rugData = await res.json();
     }
     loadData();
